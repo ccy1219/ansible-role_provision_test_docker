@@ -6,7 +6,7 @@
       - "ccy1219/docker-img-base:python-37-ssh"
       - "ccy1219/docker-img-base:jenkins-node-ssh"
   roles:
-    - role: ansible_role_provision_test_docker
+    - role: ansible-role_provision_test_docker
 
 - hosts: test_containers_group
   roles:
