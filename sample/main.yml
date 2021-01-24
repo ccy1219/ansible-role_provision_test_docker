@@ -1,0 +1,16 @@
+- name: Bring up docker containers for docker connection inventory iface
+  hosts: localhost
+  vars:
+    - provision_docker_ssh_port_from: 45000
+    - provision_docker_container_images:
+      - "ccy1219/docker-img-base:python-37-ssh"
+      - "ccy1219/docker-img-base:jenkins-node-ssh"
+  roles:
+    - role: ansible_role_provision_test_docker
+
+- hosts: test_containers_group
+  roles:
+    - role: tested_role
+  tasks:
+    - name: "Say hello to my new containers"
+      ping:

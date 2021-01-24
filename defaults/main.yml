@@ -1,0 +1,9 @@
+---
+# defaults file for provision_docker
+
+provision_docker_ssh_port_from: 27000
+provision_docker_container_prefix: 'ansible_test_container_magic5566_'
+provision_docker_host_group: 'test_containers_group'
+provision_docker_container_images:
+  - "ccy1219/docker-img-base:python-37-ssh"
+  - "ccy1219/docker-img-base:jenkins-node-ssh"
